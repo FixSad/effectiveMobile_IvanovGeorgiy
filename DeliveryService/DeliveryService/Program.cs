@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using DeliveryService;
+
+Properties.Default.DeliveryOrder = "Test";
+Properties.Default.Save();
+
+Console.WriteLine($"Hello, {Properties.Default.DeliveryOrder}");

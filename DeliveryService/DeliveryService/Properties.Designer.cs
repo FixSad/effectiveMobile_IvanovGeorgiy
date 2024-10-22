@@ -22,5 +22,17 @@ namespace DeliveryService {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DeliveryOrder {
+            get {
+                return ((string)(this["DeliveryOrder"]));
+            }
+            set {
+                this["DeliveryOrder"] = value;
+            }
+        }
     }
 }

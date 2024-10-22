@@ -12,6 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DeliveryService.Domain\DeliveryService.Domain.csproj" />
+    <ProjectReference Include="..\DeliveryService.Service\DeliveryService.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
@@ -21,7 +26,7 @@
 
   <ItemGroup>
     <None Update="Properties.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Properties.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>

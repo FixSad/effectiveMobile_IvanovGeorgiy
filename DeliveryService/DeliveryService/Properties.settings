@@ -3,7 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="DeliveryOrder" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">DeliveryOrder.txt</Value>
+    </Setting>
+    <Setting Name="DeliveryLog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DeliveryLog.txt</Value>
+    </Setting>
+    <Setting Name="AllOrders" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AllOrders.txt</Value>
     </Setting>
   </Settings>
 </SettingsFile>

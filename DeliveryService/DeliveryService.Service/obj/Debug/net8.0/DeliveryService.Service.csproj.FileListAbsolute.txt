@@ -1,0 +1,16 @@
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\bin\Debug\net8.0\DeliveryService.Service.deps.json
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\bin\Debug\net8.0\DeliveryService.Service.dll
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\bin\Debug\net8.0\DeliveryService.Service.pdb
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\bin\Debug\net8.0\DeliveryService.Domain.dll
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\bin\Debug\net8.0\DeliveryService.Domain.pdb
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\DeliveryService.Service.csproj.AssemblyReference.cache
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\DeliveryService.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\DeliveryService.Service.AssemblyInfoInputs.cache
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\DeliveryService.Service.AssemblyInfo.cs
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\DeliveryService.Service.csproj.CoreCompileInputs.cache
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\DeliveryService.Service.sourcelink.json
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\Delivery.1621C297.Up2Date
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\DeliveryService.Service.dll
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\refint\DeliveryService.Service.dll
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\DeliveryService.Service.pdb
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\ref\DeliveryService.Service.dll

@@ -13,7 +13,7 @@ namespace DeliveryService {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.11.0.0")]
-    internal sealed partial class Properties : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class Properties : global::System.Configuration.ApplicationSettingsBase {
         
         private static Properties defaultInstance = ((Properties)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Properties())));
         
@@ -25,13 +25,34 @@ namespace DeliveryService {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DeliveryOrder.txt")]
         public string DeliveryOrder {
             get {
                 return ((string)(this["DeliveryOrder"]));
             }
             set {
                 this["DeliveryOrder"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("DeliveryLog.txt")]
+        public string DeliveryLog {
+            get {
+                return ((string)(this["DeliveryLog"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("AllOrders.txt")]
+        public string AllOrders {
+            get {
+                return ((string)(this["AllOrders"]));
+            }
+            set {
+                this["AllOrders"] = value;
             }
         }
     }

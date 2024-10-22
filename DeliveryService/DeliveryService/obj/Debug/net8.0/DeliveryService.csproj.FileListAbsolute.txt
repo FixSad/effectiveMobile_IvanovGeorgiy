@@ -21,3 +21,7 @@ D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\obj\De
 D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\obj\Debug\net8.0\DeliveryService.pdb
 D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\obj\Debug\net8.0\DeliveryService.genruntimeconfig.cache
 D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\obj\Debug\net8.0\ref\DeliveryService.dll
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\bin\Debug\net8.0\DeliveryService.Domain.dll
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\bin\Debug\net8.0\DeliveryService.Domain.pdb
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\bin\Debug\net8.0\DeliveryService.Service.dll
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\bin\Debug\net8.0\DeliveryService.Service.pdb

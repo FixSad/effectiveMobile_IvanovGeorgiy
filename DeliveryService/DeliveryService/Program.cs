@@ -1,6 +1,15 @@
-﻿using DeliveryService;
+﻿using DeliveryService.Domain.ViewModels;
+using DeliveryService.Service.Interfaces;
+using DeliveryService.Service.Implementations;
 
-Properties.Default.DeliveryOrder = "Test";
-Properties.Default.Save();
+IOrderService<OrderViewModel> _orderRepository = new OrderService();
 
-Console.WriteLine($"Hello, {Properties.Default.DeliveryOrder}");
+_orderRepository.Create(new OrderViewModel()
+{
+    Id = 2,
+    Weight = 1,
+    DistrictId = 1,
+    DeliveryDateTime = DateTime.Now
+});
+
+//_orderRepository.Delete('2');

@@ -25,3 +25,4 @@ D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\bin\De
 D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\bin\Debug\net8.0\DeliveryService.Domain.pdb
 D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\bin\Debug\net8.0\DeliveryService.Service.dll
 D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\bin\Debug\net8.0\DeliveryService.Service.pdb
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService\bin\Debug\net8.0\DeliveryService.Service.dll.config

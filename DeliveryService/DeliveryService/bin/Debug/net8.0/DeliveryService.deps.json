@@ -68,7 +68,8 @@
       },
       "DeliveryService.Service/1.0.0": {
         "dependencies": {
-          "DeliveryService.Domain": "1.0.0"
+          "DeliveryService.Domain": "1.0.0",
+          "System.Configuration.ConfigurationManager": "8.0.1"
         },
         "runtime": {
           "DeliveryService.Service.dll": {

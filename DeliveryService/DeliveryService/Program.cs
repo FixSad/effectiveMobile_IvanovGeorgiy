@@ -4,12 +4,13 @@ using DeliveryService.Service.Implementations;
 
 IOrderService<OrderViewModel> _orderRepository = new OrderService();
 
-_orderRepository.Create(new OrderViewModel()
+/*var response = _orderRepository.Create(new OrderViewModel()
 {
-    Id = 2,
     Weight = 1,
     DistrictId = 1,
     DeliveryDateTime = DateTime.Now
-});
+}).Result;*/
 
-//_orderRepository.Delete('2');
+var response = _orderRepository.Delete('2').Result;
+
+Console.WriteLine(response.Description);

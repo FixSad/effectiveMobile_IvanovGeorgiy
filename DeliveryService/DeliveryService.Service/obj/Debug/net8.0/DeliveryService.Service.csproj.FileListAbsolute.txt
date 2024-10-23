@@ -14,3 +14,4 @@ D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Servic
 D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\refint\DeliveryService.Service.dll
 D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\DeliveryService.Service.pdb
 D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\obj\Debug\net8.0\ref\DeliveryService.Service.dll
+D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Service\bin\Debug\net8.0\DeliveryService.Service.dll.config

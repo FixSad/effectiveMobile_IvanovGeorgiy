@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|solutionrelative:deliveryservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice\\properties.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|solutionrelative:deliveryservice\\properties.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C184B79A-5ABE-4840-9418-0F31AC1CAFF4}|DeliveryService.Service\\DeliveryService.Service.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice.service\\implementations\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C184B79A-5ABE-4840-9418-0F31AC1CAFF4}|DeliveryService.Service\\DeliveryService.Service.csproj|solutionrelative:deliveryservice.service\\implementations\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C184B79A-5ABE-4840-9418-0F31AC1CAFF4}|DeliveryService.Service\\DeliveryService.Service.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice.service\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C184B79A-5ABE-4840-9418-0F31AC1CAFF4}|DeliveryService.Service\\DeliveryService.Service.csproj|solutionrelative:deliveryservice.service\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C184B79A-5ABE-4840-9418-0F31AC1CAFF4}|DeliveryService.Service\\DeliveryService.Service.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice.service\\implementations\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C184B79A-5ABE-4840-9418-0F31AC1CAFF4}|DeliveryService.Service\\DeliveryService.Service.csproj|solutionrelative:deliveryservice.service\\implementations\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|solutionrelative:deliveryservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDBCEE80-95AA-437E-8E24-297447CC8640}|DeliveryService.Domain\\DeliveryService.Domain.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice.domain\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDBCEE80-95AA-437E-8E24-297447CC8640}|DeliveryService.Domain\\DeliveryService.Domain.csproj|solutionrelative:deliveryservice.domain\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\deliveryservice\\properties.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
-      "RelativeMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|solutionrelative:deliveryservice\\properties.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+      "AbsoluteMoniker": "D:0:0:{DDBCEE80-95AA-437E-8E24-297447CC8640}|DeliveryService.Domain\\DeliveryService.Domain.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice.domain\\response\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDBCEE80-95AA-437E-8E24-297447CC8640}|DeliveryService.Domain\\DeliveryService.Domain.csproj|solutionrelative:deliveryservice.domain\\response\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDBCEE80-95AA-437E-8E24-297447CC8640}|DeliveryService.Domain\\DeliveryService.Domain.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice.domain\\deliveryservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{DDBCEE80-95AA-437E-8E24-297447CC8640}|DeliveryService.Domain\\DeliveryService.Domain.csproj|solutionrelative:deliveryservice.domain\\deliveryservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C184B79A-5ABE-4840-9418-0F31AC1CAFF4}|DeliveryService.Service\\DeliveryService.Service.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice.service\\properties.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C184B79A-5ABE-4840-9418-0F31AC1CAFF4}|DeliveryService.Service\\DeliveryService.Service.csproj|solutionrelative:deliveryservice.service\\properties.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice\\deliveryservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|solutionrelative:deliveryservice\\deliveryservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C184B79A-5ABE-4840-9418-0F31AC1CAFF4}|DeliveryService.Service\\DeliveryService.Service.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice.service\\properties.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{C184B79A-5ABE-4840-9418-0F31AC1CAFF4}|DeliveryService.Service\\DeliveryService.Service.csproj|solutionrelative:deliveryservice.service\\properties.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65BA6D3E-D83B-4071-960E-E494603FED96}|DeliveryService\\DeliveryService.csproj|d:\\projects\\effectivemobile_ivanovgeorgiy\\deliveryservice\\deliveryservice\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -46,17 +50,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 278,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "BaseResponse.cs",
+              "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Domain\\Response\\BaseResponse.cs",
+              "RelativeDocumentMoniker": "DeliveryService.Domain\\Response\\BaseResponse.cs",
+              "ToolTip": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Domain\\Response\\BaseResponse.cs",
+              "RelativeToolTip": "DeliveryService.Domain\\Response\\BaseResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T21:14:14.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Properties.Designer.cs",
+              "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Service\\Properties.Designer.cs",
+              "RelativeDocumentMoniker": "DeliveryService.Service\\Properties.Designer.cs",
+              "ToolTip": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Service\\Properties.Designer.cs",
+              "RelativeToolTip": "DeliveryService.Service\\Properties.Designer.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T21:08:29.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "OrderService.cs",
               "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Service\\Implementations\\OrderService.cs",
               "RelativeDocumentMoniker": "DeliveryService.Service\\Implementations\\OrderService.cs",
               "ToolTip": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Service\\Implementations\\OrderService.cs",
               "RelativeToolTip": "DeliveryService.Service\\Implementations\\OrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwGQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T20:05:20.835Z",
               "EditorCaption": ""
@@ -64,57 +94,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IOrderService.cs",
-              "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Service\\Interfaces\\IOrderService.cs",
-              "RelativeDocumentMoniker": "DeliveryService.Service\\Interfaces\\IOrderService.cs",
-              "ToolTip": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Service\\Interfaces\\IOrderService.cs",
-              "RelativeToolTip": "DeliveryService.Service\\Interfaces\\IOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T20:04:01.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Properties.settings",
-              "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService\\Properties.settings",
-              "RelativeDocumentMoniker": "DeliveryService\\Properties.settings",
-              "ToolTip": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService\\Properties.settings",
-              "RelativeToolTip": "DeliveryService\\Properties.settings",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
-              "WhenOpened": "2024-10-22T11:45:07.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService\\Program.cs",
               "RelativeDocumentMoniker": "DeliveryService\\Program.cs",
               "ToolTip": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService\\Program.cs",
               "RelativeToolTip": "DeliveryService\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T22:35:27.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Properties.Designer.cs",
-              "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService\\Properties.Designer.cs",
-              "RelativeDocumentMoniker": "DeliveryService\\Properties.Designer.cs",
-              "ToolTip": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService\\Properties.Designer.cs",
-              "RelativeToolTip": "DeliveryService\\Properties.Designer.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAApwA8AAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T11:45:10.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "OrderViewModel.cs",
               "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Domain\\ViewModels\\OrderViewModel.cs",
               "RelativeDocumentMoniker": "DeliveryService.Domain\\ViewModels\\OrderViewModel.cs",
@@ -127,8 +119,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DeliveryService.Domain",
+              "DocumentIndex": 1,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Service\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "DeliveryService.Service\\Interfaces\\IOrderService.cs",
+              "ToolTip": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Service\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "DeliveryService.Service\\Interfaces\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T20:04:01.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DeliveryService.Domain.csproj",
               "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Domain\\DeliveryService.Domain.csproj",
               "RelativeDocumentMoniker": "DeliveryService.Domain\\DeliveryService.Domain.csproj",
               "ToolTip": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Domain\\DeliveryService.Domain.csproj",
@@ -136,6 +141,18 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-10-22T17:14:31.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Properties.settings",
+              "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Service\\Properties.settings",
+              "RelativeDocumentMoniker": "DeliveryService.Service\\Properties.settings",
+              "ToolTip": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService.Service\\Properties.settings",
+              "RelativeToolTip": "DeliveryService.Service\\Properties.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
+              "WhenOpened": "2024-10-23T20:59:57.502Z",
               "EditorCaption": ""
             },
             {
@@ -153,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "App.config",
               "DocumentMoniker": "D:\\projects\\effectiveMobile_IvanovGeorgiy\\DeliveryService\\DeliveryService\\App.config",
               "RelativeDocumentMoniker": "DeliveryService\\App.config",

@@ -78,7 +78,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "DeliveryService.Domain": "1.0.0"
+          "DeliveryService.Domain": "1.0.0",
+          "System.Configuration.ConfigurationManager": "8.0.1"
         },
         "compile": {
           "bin/placeholder/DeliveryService.Service.dll": {}

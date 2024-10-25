@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <None Update="Properties.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Properties.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>

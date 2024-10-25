@@ -1,16 +1,141 @@
 ﻿using DeliveryService.Domain.ViewModels;
 using DeliveryService.Service.Interfaces;
 using DeliveryService.Service.Implementations;
+using DeliveryService.Service;
+using System.IO;
+using System.Text;
+using System.Globalization;
 
-IOrderService<OrderViewModel> _orderRepository = new OrderService();
+IOrderService<OrderViewModel> orderService = new OrderService();
 
-/*var response = _orderRepository.Create(new OrderViewModel()
+// На всякий случай настроил переменные из properties.settings, если сбилось
+Properties.Default.DeliveryOrder = "DeliveryOrder.txt";
+Properties.Default.AllOrders = "AllOrders.txt";
+Console.WriteLine("Добро пожаловать! \n" +
+            "Файл с результатом и бд будут лежать в DeliveryService\\DeliveryService\\bin\\Debug\\net8.0 \n" +
+            "Нажмите любую клавишу для продолжения...");
+Console.ReadKey();
+Console.Clear();
+while (true)
 {
-    Weight = 1,
-    DistrictId = 1,
-    DeliveryDateTime = DateTime.Now
-}).Result;*/
+	try
+	{
+        if (Welcome())
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("1. Добавить заказ\n" +
+                                  "2. Удалить заказ\n" +
+                                  "3. Отсортировать заказ\n" +
+                                  "Список заказов:");
+                Console.WriteLine(GetAllOrders());
+                ConsoleKeyInfo key = Console.ReadKey(true);
 
-var response = _orderRepository.Delete('2').Result;
+                switch (key.Key)
+                {
+                    case ConsoleKey.D1:
+                        Console.WriteLine(CreateOrder());
+                        break;
+                    case ConsoleKey.D2:
+                        Console.WriteLine(DeleteOrder());
+                        break;
+                    case ConsoleKey.D3:
+                        Console.WriteLine("3");
+                        break;
+                    default:
+                        continue;
+                }
+                Console.ReadKey();
+            }
+        }
+        else
+            continue;
 
-Console.WriteLine(response.Description);
+	}
+	catch (Exception ex)
+	{
+        Console.WriteLine(ex.Message);
+	}
+}
+
+bool Welcome()
+{
+    Console.Write("Введите путь к папке, где будут храниться логи. Напишите \\ на конце: ");
+    string? path = Console.ReadLine();
+    if (path.Length <= 0 || !path.EndsWith("\\"))
+    {
+        Console.WriteLine("Вы не написали путь, либо не закончили его на \\. Нажмите любую клавишу для продолжения...");
+        Console.ReadKey(true);
+        Console.Clear();
+        return false;
+    }
+    if (!Directory.Exists(path))
+    {
+        Console.WriteLine("Путь не существует. Нажмите любую клавишу для продолжения...");
+        Console.ReadKey(true);
+        Console.Clear();
+        return false;
+    }
+    Properties.Default.DeliveryLog = path;
+    return true;
+}
+
+string GetAllOrders()
+{
+    var response = orderService.GetAllOrders().Result;
+    if (response.IsSuccess)
+    {
+        List<OrderViewModel> orders = response.Data;
+
+        StringBuilder result = new StringBuilder();
+
+        foreach (var order in orders)
+        {
+            result.Append($"Id: {order.Id}, Вес: {order.Weight}, Район: {order.DistrictId}, Дата: {order.DeliveryDateTime}\n");
+        }
+
+        return result.ToString();
+    }
+    return response.Description;
+}
+
+string DeleteOrder()
+{
+    Console.Write("Введите id заказа для удаления: ");
+
+    string? id = Console.ReadLine();
+
+    var response = orderService.Delete(id).Result;
+
+    return response.Description;
+}
+
+string CreateOrder()
+{
+    Console.Write("Введите Id района: ");
+    string? districtId = Console.ReadLine();
+    Console.Write("Введите вес: ");
+    string? weight = Console.ReadLine(); 
+    Console.Write("Введите дату в формате {yyyy-MM-dd HH:mm:ss}: ");
+    string? date = Console.ReadLine();
+
+    try
+    {
+        var response = orderService.Create(new OrderViewModel()
+        {
+            DistrictId = int.Parse(districtId),
+            Weight = float.Parse(weight),
+            DeliveryDateTime = DateTime.ParseExact(date,
+                        "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+        }).Result;
+
+        return response.Description ;
+    }
+    catch(Exception ex)
+    {
+        return ex.Message;
+    }
+}
+
+// 2024-10-24 21:40:00

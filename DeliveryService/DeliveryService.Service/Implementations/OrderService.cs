@@ -1,6 +1,7 @@
 ﻿using DeliveryService.Domain.Response;
 using DeliveryService.Domain.ViewModels;
 using DeliveryService.Service.Interfaces;
+using System.Globalization;
 using System.Reflection.Metadata;
 
 namespace DeliveryService.Service.Implementations
@@ -12,7 +13,7 @@ namespace DeliveryService.Service.Implementations
         {
             try
             {
-                using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog, true))
+                using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
                 {
                     // автосоздание id
                     var lines = File.ReadLines(Properties.Default.AllOrders);
@@ -61,7 +62,7 @@ namespace DeliveryService.Service.Implementations
             }
             catch (Exception ex)
             {
-                using (StreamWriter sw = new StreamWriter(Properties.Default.DeliveryLog, true))
+                using (StreamWriter sw = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
                 {
                     await sw.WriteLineAsync($"{DateTime.Now}: Заказ с номером" +
                         $" {viewModel.Id}. Ошибка: {ex.Message}");
@@ -75,11 +76,11 @@ namespace DeliveryService.Service.Implementations
         }
 
         // Удаение заказа
-        public async Task<IBaseResponse<OrderViewModel>> Delete(char id)
+        public async Task<IBaseResponse<OrderViewModel>> Delete(string id)
         {
             try
             {
-                using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog, true))
+                using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
                 {
                     await logWriter.WriteLineAsync($"{DateTime.Now}: Удаление заказа с номером {id}...");
 
@@ -88,7 +89,7 @@ namespace DeliveryService.Service.Implementations
                     foreach (string line in readText)
                     {
                         var items = line.Split(' ').ToList();
-                        if (items[0].Equals(id.ToString()))
+                        if (items[0].Equals(id))
                         {
                             readText.Remove(line);
                             await logWriter.WriteLineAsync($"{DateTime.Now}: Заказ с номером {id} успешно удален");
@@ -112,7 +113,7 @@ namespace DeliveryService.Service.Implementations
 
             catch (Exception ex)
             {
-                using (StreamWriter sw = new StreamWriter(Properties.Default.DeliveryLog, true))
+                using (StreamWriter sw = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
                 {
                     await sw.WriteLineAsync($"{DateTime.Now}: Заказ с номером {id}. Ошибка: {ex.Message}");
                 }
@@ -124,11 +125,11 @@ namespace DeliveryService.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<OrderViewModel>> Get(char id)
+        public async Task<IBaseResponse<OrderViewModel>> Get(string id)
         {
             try
             {
-                using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog, true))
+                using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
                 {
                     await logWriter.WriteLineAsync($"{DateTime.Now}: Получение заказа с номером {id}...");
 
@@ -137,13 +138,13 @@ namespace DeliveryService.Service.Implementations
                     foreach (string line in readText)
                     {
                         var items = line.Split(' ').ToList();
-                        if (items[0].Equals(id.ToString()))
+                        if (items[0].Equals(id))
                         {
                             await logWriter.WriteLineAsync($"{DateTime.Now}: Заказ с номером {id} успешно получен");
                             string dt = $"{items[3]} {items[4]}";
                             var result = new OrderViewModel()
                             {
-                                Id = id,
+                                Id = int.Parse(id),
                                 Weight = float.Parse(items[1]),
                                 DistrictId = int.Parse(items[2]),
                                 DeliveryDateTime = DateTime.Parse(dt)
@@ -154,7 +155,7 @@ namespace DeliveryService.Service.Implementations
                                 IsSuccess = true,
                                 Data = new OrderViewModel()
                                 {
-                                    Id = id,
+                                    Id = int.Parse(id),
                                     Weight = float.Parse(items[1]),
                                     DistrictId = int.Parse(items[2]),
                                     DeliveryDateTime = DateTime.Parse(dt)
@@ -173,7 +174,7 @@ namespace DeliveryService.Service.Implementations
             }
             catch (Exception ex)
             {
-                using (StreamWriter sw = new StreamWriter(Properties.Default.DeliveryLog, true))
+                using (StreamWriter sw = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
                 {
                     await sw.WriteLineAsync($"{DateTime.Now}: Заказ с номером {id}. Ошибка: {ex.Message}");
                 }
@@ -182,6 +183,118 @@ namespace DeliveryService.Service.Implementations
                     Description = $"Ошибка: {ex.Message}",
                     IsSuccess = false
                 };
+            }
+        }
+
+        public async Task<IBaseResponse<List<OrderViewModel>>> Sort(string districtId, string startDateTime)
+        {
+            try
+            {
+                using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
+                {
+                    DateTime parseDateTime = DateTime.ParseExact(startDateTime, 
+                        "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+
+                    await logWriter.WriteLineAsync($"{DateTime.Now}: Сортировка заказов от {parseDateTime}...");
+
+                    List<string> readText = File.ReadAllLines(Properties.Default.AllOrders).ToList();
+                    List<OrderViewModel> list = new List<OrderViewModel>();
+                    foreach (var line in readText)
+                    {
+                        var tmp = line.Split(' ').ToList();
+                        string dt = $"{tmp[3]} {tmp[4]}";
+                        if (tmp[2].Equals(districtId))
+                            list.Add(new OrderViewModel()
+                            {
+                                Id = int.Parse(tmp[0]),
+                                Weight = float.Parse(tmp[1]),
+                                DistrictId = int.Parse(tmp[2]),
+                                DeliveryDateTime = DateTime.Parse(dt)
+                            });
+                    }
+                
+                    List<OrderViewModel> res = list.Where(dt => dt.DeliveryDateTime >= parseDateTime 
+                            && dt.DeliveryDateTime <= parseDateTime.AddMinutes(30)).ToList();
+
+                    await logWriter.WriteLineAsync($"{DateTime.Now}: Сортировка заказов от {parseDateTime} успешна");
+
+                    using (StreamWriter resultWriter = new StreamWriter(Properties.Default.DeliveryOrder, false))
+                    {
+                        foreach (var order in res)
+                        {
+                            await resultWriter.WriteLineAsync($"Id: {order.Id},  Weight: {order.Weight}, " +
+                                $"District: {order.DistrictId}, Time: {order.DeliveryDateTime}");
+                        }
+                    }
+
+                    return new BaseResponse<List<OrderViewModel>>()
+                    {
+                        IsSuccess = true,
+                        Description = $"Результат был записан в файл DeliveryOrder.txt",
+                        Data = res
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
+                {
+                    await logWriter.WriteLineAsync($"{DateTime.Now}: Ошибка. {ex.Message}");
+
+                    return new BaseResponse<List<OrderViewModel>>()
+                    {
+                        Description = $"Ошибка: {ex.Message}",
+                        IsSuccess = false
+                    };
+                }
+            }
+        }
+
+        public async Task<IBaseResponse<List<OrderViewModel>>> GetAllOrders()
+        {
+            try
+            {
+                using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
+                {
+                    await logWriter.WriteLineAsync($"{DateTime.Now}: Получение всех заказов...");
+
+                    List<string> readText = File.ReadAllLines(Properties.Default.AllOrders).ToList();
+                    List<OrderViewModel> list = new List<OrderViewModel>();
+                    foreach (var line in readText)
+                    {
+                        var tmp = line.Split(' ').ToList();
+                        string dt = $"{tmp[3]} {tmp[4]}";
+                        list.Add(new OrderViewModel()
+                        {
+                            Id = int.Parse(tmp[0]),
+                            Weight = float.Parse(tmp[1]),
+                            DistrictId = int.Parse(tmp[2]),
+                            DeliveryDateTime = DateTime.Parse(dt)
+                        });
+                    }
+
+                    await logWriter.WriteLineAsync($"{DateTime.Now}: Заказы получены успешно");
+
+                    return new BaseResponse<List<OrderViewModel>>()
+                    {
+                        IsSuccess = true,
+                        Description = $"Результат был записан в файл DeliveryOrder.txt",
+                        Data = list
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
+                {
+                    await logWriter.WriteLineAsync($"{DateTime.Now}: Ошибка. {ex.Message}");
+
+                    return new BaseResponse<List<OrderViewModel>>()
+                    {
+                        Description = $"Ошибка: {ex.Message}",
+                        IsSuccess = false
+                    };
+                }
             }
         }
     }

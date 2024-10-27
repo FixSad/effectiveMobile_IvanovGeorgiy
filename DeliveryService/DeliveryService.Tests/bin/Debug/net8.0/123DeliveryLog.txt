@@ -1,0 +1,3 @@
+27.10.2024 18:27:07: Заказ с номером 0. Ошибка: The process cannot access the file 'D:\projects\effectiveMobile_IvanovGeorgiy\DeliveryService\DeliveryService.Tests\bin\Debug\net8.0\AllOrders.txt' because it is being used by another process.
+27.10.2024 18:28:21: Создание заказа с номером 1...
+27.10.2024 18:28:21: Заказ с номером 1 успешно создан

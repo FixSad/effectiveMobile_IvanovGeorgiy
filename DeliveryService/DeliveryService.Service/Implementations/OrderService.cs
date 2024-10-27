@@ -2,7 +2,10 @@
 using DeliveryService.Domain.ViewModels;
 using DeliveryService.Service.Interfaces;
 using System.Globalization;
+using System.IO;
 using System.Reflection.Metadata;
+using System.Reflection.PortableExecutable;
+using System.Text;
 
 namespace DeliveryService.Service.Implementations
 {
@@ -16,7 +19,18 @@ namespace DeliveryService.Service.Implementations
                 using (StreamWriter logWriter = new StreamWriter(Properties.Default.DeliveryLog + "DeliveryLog.txt", true))
                 {
                     // автосоздание id
-                    var lines = File.ReadLines(Properties.Default.AllOrders);
+
+                    List<string> lines = new List<string>();
+                    using (StreamWriter orderWriter = new StreamWriter(Properties.Default.AllOrders, true)){}
+                    using (StreamReader ordersReader = new StreamReader(Properties.Default.AllOrders, true))
+                    {
+                        string? line;
+                        while ((line = await ordersReader.ReadLineAsync()) != null)
+                        {
+                            lines.Add(line);
+                        }
+                    }
+
                     int id = 1;
                     if(File.ReadLines(Properties.Default.AllOrders).Count() > 0)
                     {

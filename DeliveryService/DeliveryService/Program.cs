@@ -2,7 +2,6 @@
 using DeliveryService.Service.Interfaces;
 using DeliveryService.Service.Implementations;
 using DeliveryService.Service;
-using System.IO;
 using System.Text;
 using System.Globalization;
 

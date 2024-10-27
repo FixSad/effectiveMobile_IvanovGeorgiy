@@ -21,7 +21,7 @@ namespace DeliveryService.Service.Implementations
                     // автосоздание id
 
                     List<string> lines = new List<string>();
-                    using (StreamWriter orderWriter = new StreamWriter(Properties.Default.AllOrders, true)){}
+                    using (StreamWriter orderWriter = new StreamWriter(Properties.Default.AllOrders, true)) { }
                     using (StreamReader ordersReader = new StreamReader(Properties.Default.AllOrders, true))
                     {
                         string? line;
@@ -31,14 +31,17 @@ namespace DeliveryService.Service.Implementations
                         }
                     }
 
-                    int id = 1;
-                    if(File.ReadLines(Properties.Default.AllOrders).Count() > 0)
+                    if (viewModel.Id == 0)
                     {
-                        var lastLine = lines.LastOrDefault().Split(' ').ToList();
-                        id = int.Parse(lastLine[0]) + id;
-                    }
-                    
-                    viewModel.Id = id;
+                        int id = 1;
+                        if (File.ReadLines(Properties.Default.AllOrders).Count() > 0)
+                        {
+                            var lastLine = lines.LastOrDefault().Split(' ').ToList();
+                            id = int.Parse(lastLine[0]) + id;
+                        }
+
+                        viewModel.Id = id;
+                    }                    
 
                     await logWriter.WriteLineAsync($"{DateTime.Now}: Создание заказа с номером {viewModel.Id}...");
 
@@ -63,7 +66,7 @@ namespace DeliveryService.Service.Implementations
                     // Если не создан, то записываем
                     using (StreamWriter ordersWriter = new StreamWriter(Properties.Default.AllOrders, true))
                     {
-                        await ordersWriter.WriteLineAsync($"{id} {viewModel.Weight} " +
+                        await ordersWriter.WriteLineAsync($"{viewModel.Id} {viewModel.Weight} " +
                             $"{viewModel.DistrictId} {viewModel.DeliveryDateTime}");
                     }
                     await logWriter.WriteLineAsync($"{DateTime.Now}: Заказ с номером {viewModel.Id} успешно создан");
@@ -98,16 +101,25 @@ namespace DeliveryService.Service.Implementations
                 {
                     await logWriter.WriteLineAsync($"{DateTime.Now}: Удаление заказа с номером {id}...");
 
-                    List<string> readText = File.ReadAllLines(Properties.Default.AllOrders).ToList();
+                    using (StreamWriter orderWriter = new StreamWriter(Properties.Default.AllOrders, true)) { }
+                    List<string> lines = new List<string>();
+                    using (StreamReader ordersReader = new StreamReader(Properties.Default.AllOrders, true))
+                    {
+                        string? line;
+                        while ((line = await ordersReader.ReadLineAsync()) != null)
+                        {
+                            lines.Add(line);
+                        }
+                    }
 
-                    foreach (string line in readText)
+                    foreach (string line in lines)
                     {
                         var items = line.Split(' ').ToList();
                         if (items[0].Equals(id))
                         {
-                            readText.Remove(line);
+                            lines.Remove(line);
                             await logWriter.WriteLineAsync($"{DateTime.Now}: Заказ с номером {id} успешно удален");
-                            File.WriteAllLines(Properties.Default.AllOrders, readText);
+                            File.WriteAllLines(Properties.Default.AllOrders, lines);
                             return new BaseResponse<OrderViewModel>()
                             {
                                 Description = $"Заказ с номером {id} успешно удален",
@@ -120,7 +132,7 @@ namespace DeliveryService.Service.Implementations
                     return new BaseResponse<OrderViewModel>()
                     {
                         Description = $"Заказ с номером {id} не был найден",
-                        IsSuccess = true
+                        IsSuccess = false
                     };
                 }
             }
@@ -209,6 +221,8 @@ namespace DeliveryService.Service.Implementations
                     DateTime parseDateTime = DateTime.ParseExact(startDateTime, 
                         "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
 
+                    int checkIdInt = int.Parse(districtId);
+
                     await logWriter.WriteLineAsync($"{DateTime.Now}: Сортировка заказов от {parseDateTime}...");
 
                     List<string> readText = File.ReadAllLines(Properties.Default.AllOrders).ToList();
@@ -272,9 +286,19 @@ namespace DeliveryService.Service.Implementations
                 {
                     await logWriter.WriteLineAsync($"{DateTime.Now}: Получение всех заказов...");
 
-                    List<string> readText = File.ReadAllLines(Properties.Default.AllOrders).ToList();
+                    List<string> lines = new List<string>();
+                    using (StreamWriter orderWriter = new StreamWriter(Properties.Default.AllOrders, true)) { }
+                    using (StreamReader ordersReader = new StreamReader(Properties.Default.AllOrders, true))
+                    {
+                        string? line;
+                        while ((line = await ordersReader.ReadLineAsync()) != null)
+                        {
+                            lines.Add(line);
+                        }
+                    }
+
                     List<OrderViewModel> list = new List<OrderViewModel>();
-                    foreach (var line in readText)
+                    foreach (var line in lines)
                     {
                         var tmp = line.Split(' ').ToList();
                         string dt = $"{tmp[3]} {tmp[4]}";

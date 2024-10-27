@@ -28,6 +28,7 @@ while (true)
                 Console.WriteLine("1. Добавить заказ\n" +
                                   "2. Удалить заказ\n" +
                                   "3. Отсортировать заказ\n" +
+                                  "4. Выйти\n" +
                                   "Список заказов:");
                 Console.WriteLine(GetAllOrders());
                 ConsoleKeyInfo key = Console.ReadKey(true);
@@ -41,7 +42,10 @@ while (true)
                         Console.WriteLine(DeleteOrder());
                         break;
                     case ConsoleKey.D3:
-                        Console.WriteLine("3");
+                        Console.WriteLine(SortOrders());
+                        break;
+                    case ConsoleKey.D4:
+                        Environment.Exit(0);
                         break;
                     default:
                         continue;
@@ -138,4 +142,14 @@ string CreateOrder()
     }
 }
 
-// 2024-10-24 21:40:00
+string SortOrders()
+{
+    Console.Write("Введите Id района: ");
+    string? districtId = Console.ReadLine();
+    Console.Write("Введите дату начала сортировки в формате {yyyy-MM-dd HH:mm:ss}: ");
+    string? startDate = Console.ReadLine();
+
+    var response = orderService.Sort(districtId, startDate).Result;
+
+    return response.Description;
+}

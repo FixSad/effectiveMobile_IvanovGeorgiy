@@ -1,0 +1,2 @@
+Id: 6,  Weight: 321, District: 3, Time: 24.10.2024 21:45:00
+Id: 8,  Weight: 3, District: 3, Time: 24.10.2024 22:05:00
